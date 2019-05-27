@@ -27,4 +27,14 @@ public class SimilarityFinderTest {
 
         Assert.assertThat(result, Matchers.equalTo(expectedResult));
     }
+
+    @Test
+    public void testJackardSimilarityWhenSeq1AndSeq2IsTheSame(){
+        int[] seq1 = {1, 2, 3};
+        int[] seq2 = {1, 2, 3};
+        double expectedResult = 1.0;
+        double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
+
+        Assert.assertThat(result, Matchers.equalTo(expectedResult));
+    }
 }
