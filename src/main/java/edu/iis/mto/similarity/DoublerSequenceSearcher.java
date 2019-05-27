@@ -8,6 +8,14 @@ public class DoublerSequenceSearcher implements SequenceSearcher {
 
     public static int counter = 0;
 
+    public DoublerSequenceSearcher() {
+        counter = 0;
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
     @Override
     public SearchResult search(int key, int[] seq) {
         Builder builder = SearchResult.builder();

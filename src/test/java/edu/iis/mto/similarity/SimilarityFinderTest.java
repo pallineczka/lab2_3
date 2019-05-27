@@ -54,4 +54,14 @@ public class SimilarityFinderTest {
 
         similarityFinder.calculateJackardSimilarity(seq1, null);
     }
+
+    @Test
+    public void testDoublerSequenceSearcherCounter() {
+        int[] seq1 = {1, 2};
+        int[] seq2 = {1, 2};
+
+        similarityFinder.calculateJackardSimilarity(seq1, seq2);
+        Assert.assertThat(DoublerSequenceSearcher.getCounter(), Matchers.equalTo(2));
+
+    }
 }
