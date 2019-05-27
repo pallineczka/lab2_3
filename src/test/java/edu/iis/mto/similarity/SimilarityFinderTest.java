@@ -37,4 +37,14 @@ public class SimilarityFinderTest {
 
         Assert.assertThat(result, Matchers.equalTo(expectedResult));
     }
+
+    @Test
+    public void testJackardSimilarityWhenOneElementInSeqIsDifferent(){
+        int[] seq1 = {1, 2, 3};
+        int[] seq2 = {1, 2, 5};
+        double expectedResult = 0.5;
+        double result = similarityFinder.calculateJackardSimilarity(seq1, seq2);
+
+        Assert.assertThat(result, Matchers.equalTo(expectedResult));
+    }
 }
