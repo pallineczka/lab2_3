@@ -9,7 +9,7 @@ public class SimilarityFinderTest {
     SimilarityFinder similarityFinder = new SimilarityFinder(new DoublerSequenceSearcher());
 
     @Test
-    public void testJackardSimilarityIfSeq1IsNullSeq2IsNull(){
+    public void testJackardSimilarityIfSeq1IsEmptySeq2IsEmpty(){
         int[] seq1 = {};
         int[] seq2 = {};
         double expectedResult = 1.0;
@@ -19,7 +19,7 @@ public class SimilarityFinderTest {
     }
 
     @Test
-    public void testJackardSimilarityWhenOneSeqIsNull(){
+    public void testJackardSimilarityWhenOneSeqIsEmpty(){
         int[] seq1 = {};
         int[] seq2 = {1, 2, 3};
         double expectedResult = 0.0;
